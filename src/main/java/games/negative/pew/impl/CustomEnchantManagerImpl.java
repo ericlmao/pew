@@ -49,6 +49,6 @@ public class CustomEnchantManagerImpl extends CustomEnchantManager {
 
     @Override
     public @NotNull Collection<CustomEnchant> enchantments() {
-        return List.of();
+        return enchants;
     }
 }
