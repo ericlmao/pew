@@ -1,5 +1,6 @@
 package games.negative.pew;
 
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
@@ -34,6 +35,9 @@ public abstract class CustomEnchantManager {
      */
     @NotNull
     public abstract Collection<CustomEnchant> enchantments();
+
+    @NotNull
+    public abstract Collection<EnchantmentTarget> targets(@NotNull Enchantment enchantment);
 
     /**
      * Returns the instance of the custom enchantment manager.

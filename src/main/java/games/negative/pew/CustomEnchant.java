@@ -10,6 +10,8 @@ import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.CheckReturnValue;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 public abstract class CustomEnchant implements Listener {
 
     /**
@@ -59,6 +61,9 @@ public abstract class CustomEnchant implements Listener {
         this.enchantment = enchantment;
     }
 
+    public void onEnable() {
+    }
+
     /**
      * Builds the custom enchantment registry entry.
      * @param event The registry freeze event.
@@ -68,4 +73,6 @@ public abstract class CustomEnchant implements Listener {
     @NotNull
     public abstract EnchantmentRegistryEntry.Builder builder(@NotNull RegistryFreezeEvent<Enchantment, EnchantmentRegistryEntry.Builder> event, @NotNull EnchantmentRegistryEntry.Builder builder);
 
+    @NotNull
+    public abstract List<EnchantmentTarget> targets();
 }
